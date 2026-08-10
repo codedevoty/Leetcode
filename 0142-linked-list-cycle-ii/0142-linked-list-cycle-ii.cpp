@@ -25,15 +25,16 @@ public:
                     ListNode *newNode = head;
                     ListNode *meetingNode = slow;
                     if(slow == head) return head;
-                    while(newNode != NULL){
+                    while(newNode != meetingNode){
                         newNode = newNode->next;
                         meetingNode = meetingNode->next;
-                        if(newNode == meetingNode) return newNode;
+                       
                     }
+                        return newNode;
                 }
-             }
-           
+             
+          }
          
-          return NULL;
+         return NULL;
     }
 };
