@@ -15,7 +15,7 @@ public:
         if(head == NULL || head->next == NULL){
             return NULL;
         }
-          int cnt = 0;
+     
           while(fast != NULL && fast->next != NULL){
                 slow = slow->next;
                 fast = fast->next;
@@ -24,7 +24,7 @@ public:
                 if(slow == fast){
                     ListNode *newNode = head;
                     ListNode *meetingNode = slow;
-                    if(slow == head) return head;
+                    // if(slow == head) return head;
                     while(newNode != meetingNode){
                         newNode = newNode->next;
                         meetingNode = meetingNode->next;
