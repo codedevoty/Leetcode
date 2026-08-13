@@ -40,10 +40,9 @@ public:
         while(cnt > 0){
           
            currNode = currNode->next;
-           nextNode = nextNode->next; 
             cnt--;
         }
-        currNode->next = nextNode->next;
+        currNode->next = currNode->next->next;
           
           return head;
     }
